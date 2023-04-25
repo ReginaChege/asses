@@ -1,12 +1,14 @@
 fun main(){
     random("Regina")
     println(pass("Regina123"))
-    println(pass("VeronicaNdemo"))
+    println(pass("Richard657?!09875"))
     var currentAccount=CurrentAccount("while12345","Regina",12345.90)
     var currentAccount2=CurrentAccount("while17890","Ann",156235.90)
     println( currentAccount.deposit(456789.90))
     (currentAccount2.details())
-    println(currentAccount.withdraw(2345.800))
+    currentAccount.balance
+
+    println(currentAccount.withdraw(23.800))
     var savingAccount=SavingAccount("Philiph","today987654",876543.89)
     var savingAccount2=SavingAccount("Eunice","today0987654",9873456.87)
     savingAccount.withdraw(76543.90)
@@ -39,7 +41,7 @@ fun pass(password:String):String{
     if (word<8){
         return ("Must be at least 8 characters long")
     }
-    else if (word>=16){
+    else if (word<=16){
         return("Must be at most 8 characters long")
     }
     else if (word==0){
@@ -67,12 +69,10 @@ fun pass(password:String):String{
 
 open class CurrentAccount(var accountNumber:String,var accountName:String,var balance:Double){
     fun deposit(amount:Double):Double{
-        var balance=0.0
-        var depost=balance+amount
+        var diposit=balance+amount
         return balance++
     }
     fun withdraw(amount:Double):Double{
-        balance=278.90
         var widtdraw=balance-amount
         return balance--
     }
